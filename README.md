@@ -1,4 +1,370 @@
-# FirstAngularApp
+# Angular
+
+- 2009 Google çalışanı Misko Hevery kendi projesinde kullanmak üzere geliştiriyor.
+- Angular Javascript Frameworkutur.
+- One-way data binding
+- Two-way data binding
+- SPA (Single Page Application)
+- Web, mobil uygulamalar yapabiliriz.
+- MVC mantığa göre çalışır.
+- Az kod yaz , çok iş olsun
+- Cross Platform
+- Birim testler
+- Netflix, Paypal
+- Angular JS, Angular 2, Angular 4, ... Angular 17
+- Angular 2009
+- Node 2009
+- React 2013
+- Vue 2014
+
+---
+
+# Angular Mimarisi
+
+- Component : Küçük küçük uygulamalar
+- Service : Api, Database
+- Module = Component + Service
+- Injector = Service + Service+ ...Service
+
+---
+
+# Angular CLI KOMUT
+
+- ng generate component onepage-c
+- ng generate service onepage-s
+- ng generate module onepage-m
+- ng generate pipe onepage-p
+- ng generate directive onepage-d
+- ng generate interface onepage-i
+- ng generate enum onepage-e
+
+- ng g c onepage
+
+---
+
+# Angular CLI BLOG (44)
+
+- ng generate component blogNavbar
+- ng generate c blogHeader
+- ng generate component blogMain
+- ng generate component blogFooter
+- ng generate component blogRegister
+- ng generate component blogCard
+- ng generate component blogCardDetailPage
+- ng generate pipe searchBlogFilter
+- ng generate service alertifyMessage
+- ng generate service alertifyMessage
+- ng g s blogArrayDataService
+
+---
+
+# Angular Konular
+
+- Component
+- Servis (Api, Database)
+- Module
+- Pipeline
+- Router
+
+---
+
+# TypeScript (TS)
+
+- Nesne yönelimli programalama yapmak
+- OOP dünyasındaki type safe, class, interface,inheritance
+- Compiler olması derleme yapması yani hataları bize göstermesine olanak sağlar.
+- JS= Betik dildir
+- TS= Nesne yönelimlidir.
+- TS = ES6,ES5+ ...+
+
+---
+
+# Node JS
+
+- NodeJS 2009
+- Asenkron çalışıyor.
+- Non-Blocking
+- Scability
+- Netflix,IBM, Linkedin, Apple, Google, Paypal
+
+---
+
+[GitHub Sitesi](https://github.com/hamitmizrak/angular-shoop-app.git)
+[Angular Resmi Sitesi](https://angular.io)
+[MDB5](https://mdbootstrap.com/docs/standard/navigation/footer/)
+
+---
+
+## Git
+
+```sh
+git clone https://github.com/hamitmizrak/angular-shoop-app.git
+```
+
+---
+
+## Angular Version
+
+```sh
+node -v
+npm -v
+ng v
+ng version
+ng --help
+
+java --version
+git version
+git --version
+```
+
+---
+
+## Npm
+
+```sh
+npm init
+npm init -y
+
+npm list
+npm list -g
+npm list -g --depth=0
+npm root
+npm root -g
+
+npm install
+npm i
+npm install --save bootstrap
+npm uninstall      bootstrap
+npm update         bootstrap
+```
+
+---
+
+## Npm Install Angular
+
+```sh
+npm i bootstrap
+npm i fontawesome
+npm i -g typescript
+npm i -g nodemon
+```
+
+---
+
+## Package.json
+
+```sh
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "angular": "ng serve --port 9999 --open",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  }
+
+  npm run angular (Kendi scriptlerimiz npm run diyerek yazarız.)
+```
+
+## Angular Kurulumlar
+
+```sh
+npm install -g typescript
+npm install -g @angular/cli
+```
+
+---
+
+## Angular Project
+
+```sh
+ng new angular-shoop-app
+cd angular-shoop-app
+ng serve --port 9999 --open
+
+ng serve
+ng --help
+
+ng serve (http://localhost:4200)
+ng serve --port 9999
+ng serve --open
+
+```
+
+---
+
+## Bootstrap CDN
+
+```sh
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Shoop App</title>
+  <base href="/">
+
+  <!-- Responsive Design-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+/>
+</head>
+
+<body>
+  <!-- Start Codes-->
+  <!-- <app-root></app-root> -->
+  <p class="text-primary display-4 text-center">Merhabalar Bootstrap5</p>
+  <!-- End Codes-->
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+></script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+></script>
+</body>
+</html>
+```
+
+## Angular Bootstrap
+
+```sh
+npm install bootstrap --save
+
+angular.json =>
+"styles": [
+        "src/styles.css",
+        "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
+"scripts": [
+    "node_modules/bootstrap/dist/js/bootstrap.js"
+]
+
+
+"dependencies": {
+    "@angular/animations": "^17.2.0",
+    "@angular/common": "^17.2.0",
+    "@angular/compiler": "^17.2.0",
+    "@angular/core": "^17.2.0",
+    "@angular/forms": "^17.2.0",
+    "@angular/platform-browser": "^17.2.0",
+    "@angular/platform-browser-dynamic": "^17.2.0",
+    "@angular/router": "^17.2.0",
+    "bootstrap": "^5.3.3",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3"
+  },
+
+```
+
+---
+
+## Angular Fontawesome
+
+```sh
+Terminal ==>
+npm i font-awesome
+
+angular.json ==>
+"node_modules/font-awesome/css/font-awesome.min.css"
+
+index.html ==>
+  <i class="fa-brands fa-instagram text-danger"></i>
+```
+
+---
+
+## Angular jQuery
+
+```sh
+Terminal ==>
+npm i jquery popper.js bootstrap
+
+npm i jquery
+
+angular.json ==>
+ "scripts": [
+    "node_modules/jquery/dist/jquery.min.js"
+]
+
+index.html ==>
+```
+
+---
+
+## Angular Router
+
+```sh
+// Routes import
+import { Routes } from '@angular/router';
+
+// Page Component
+import { BlogMainComponent } from './blog-main/blog-main.component';
+import { BlogRegisterComponent } from './blog-register/blog-register.component';
+
+// Export
+export const routes: Routes = [
+  // Index (Home Page: Default)
+  { path: 'index', component: BlogMainComponent },
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+
+  // Register
+  { path: 'register', component: BlogRegisterComponent },
+];
+
+```
+
+---
+
+## Angular Önemli Notlar
+
+```sh
+(click)="darkMode()  ==> Function Bağlamak
+[placeholder]="navBar.search.placeholder" ==> Attributes
+href="{{temp.link}}"
+```
+
+---
+
+## Angular ngFor
+
+```sh
+<li *ngFor="let temp of navBar.navbarLink" class="nav-item">
+    <a class="nav-link" href="{{temp.link}}">
+    {{temp.name | titlecase}}
+    </a>
+</li>
+```
+
+---
+
+## Angular CLI Delete after Install
+
+```sh
+npm uninstall -g angular/cli
+npm cache clean
+npm i -g @angular/cli
+```
+
+---
+
+## AngularShoopApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
